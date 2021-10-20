@@ -94,9 +94,9 @@ def GetPD(day):
     dff['tend1'] = dff['ttMA1'] - dff['ttMA2']
     dff['tend2'] = dff['tend1'].shift(1)
     dff1= dff.dropna()
-    dff1['bollow1'] = dff1['tMA1'] - 2*dff1['std1']
+    dff1['bollow1'] = dff1['tMA1'] - 1.8*dff1['std1']
     dff1['bollow1'] = dff1['bollow1'].round(2)
-    dff1['bolhigh1'] = dff1['tMA1'] + 2*dff1['std1']
+    dff1['bolhigh1'] = dff1['tMA1'] + 1.8*dff1['std1']
     dff1['bolhigh1'] = dff1['bolhigh1'].round(2)
     dff1['mMm'] = dff1['mid'] - dff1['mid1']
     dff1.isnull().sum()
