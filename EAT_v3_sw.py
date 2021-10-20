@@ -46,7 +46,7 @@ balance = binanceFUTURE.fetch_balance(params={"type": "future"})
 def btcc(day):
     btc = binanceFR.fetch_ohlcv(
         symbol="ETH/USDT", 
-        timeframe='5m', 
+        timeframe='3m', 
         since=None, 
         limit=24*12*day+26)
 
